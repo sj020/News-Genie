@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Headline and News Summarizer</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="{{url_for('static', filename = 'style_news.css')}}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<!-- <link rel="stylesheet" href="{{url_for('static', filename = 'style_buttons.css')}}"> -->
+
+</head>
+<body>
+<section class="light">
+	<div class="container py-4">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">Economic Times</div>
+		<h1 class="h1 text-center" id="pageHeaderTitle"></h1>
+		<article class="postcard dark blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{{url_for('static', filename='images/ET1.jpg')}}" alt="Image Title" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title blue"><a href="#">{{headline[0]}}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>{{date[0]}}
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{summary[0]}}</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item" onclick="location.href='/heading1'"><i class="fas fa-tag mr-2"></i>Headline 1</li>
+					<li class="tag__item" onclick="location.href='/heading2'"><i class="fas fa-tag mr-2"></i>Headline 2</li>
+					<li class="tag__item" onclick="location.href='/heading3'"><i class="fas fa-tag mr-2"></i>Headline 3</li>
+					<li class="tag__item play blue">
+						<a href={{article_link[0]}}><i class="fas fa-play mr-2"></i>Full Article</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard dark red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{{url_for('static', filename='images/ET1.jpg')}}" alt="Image Title" />	
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title red"><a href="#">{{headline[1]}}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>{{date[1]}}
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{summary[1]}}</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item" onclick="location.href='/heading1'"><i class="fas fa-tag mr-2"></i>Headline 1</li>
+					<li class="tag__item" onclick="location.href='/heading2'"><i class="fas fa-tag mr-2"></i>Headline 2</li>
+					<li class="tag__item" onclick="location.href='/heading3'"><i class="fas fa-tag mr-2"></i>Headline 3</li>
+					<li class="tag__item play red">
+						<a href={{article_link[1]}}><i class="fas fa-play mr-2"></i>Full Article</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard dark green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{{url_for('static', filename='images/ET1.jpg')}}" alt="Image Title" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title green"><a href="#">{{headline[2]}}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>{{date[2]}}
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{summary[2]}}</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item" onclick="location.href='/heading1'"><i class="fas fa-tag mr-2"></i>Headline 1</li>
+					<li class="tag__item" onclick="location.href='/heading2'"><i class="fas fa-tag mr-2"></i>Headline 2</li>
+					<li class="tag__item" onclick="location.href='/heading3'"><i class="fas fa-tag mr-2"></i>Headline 3</li>
+					<li class="tag__item play green">
+						<a href={{article_link[2]}}><i class="fas fa-play mr-2"></i>Full Article</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard dark yellow">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{{url_for('static', filename='images/ET1.jpg')}}" alt="Image Title" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title yellow"><a href="#">{{headline[3]}}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>{{date[3]}}
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{summary[3]}}</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item" onclick="location.href='/heading1'"><i class="fas fa-tag mr-2"></i>Headline 1</li>
+					<li class="tag__item" onclick="location.href='/heading2'"><i class="fas fa-tag mr-2"></i>Headline 2</li>
+					<li class="tag__item" onclick="location.href='/heading3'"><i class="fas fa-tag mr-2"></i>Headline 3</li>
+					<li class="tag__item play yellow">
+						<a href={{article_link[3]}}><i class="fas fa-play mr-2"></i>Full Article</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard dark red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{{url_for('static', filename='images/ET1.jpg')}}" alt="Image Title" />	
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title red"><a href="#">{{headline[4]}}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>{{date[4]}}
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{summary[4]}}</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item" onclick="location.href='/heading1'"><i class="fas fa-tag mr-2"></i>Headline 1</li>
+					<li class="tag__item" onclick="location.href='/heading2'"><i class="fas fa-tag mr-2"></i>Headline 2</li>
+					<li class="tag__item" onclick="location.href='/heading3'"><i class="fas fa-tag mr-2"></i>Headline 3</li>
+					<li class="tag__item play red">
+						<a href={{article_link[1]}}><i class="fas fa-play mr-2"></i>Full Article</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+	</div>
+</section>  
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>News Headline and Summarizer</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:300,400,700'>
+   <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+   <link rel="stylesheet" href="{{url_for('static', filename = 'style_menu.css')}}">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <h1>News Channels</h1>
+  <div class="cols">
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container" onclick="location.href='/news'">
+					<div class="front" style="background-image: url({{url_for('static', filename='images/ET.png')}})">
+						<div class="inner">
+							<p>Economic Times</p>
+              <span>India</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Click to Read News</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ </div>
+</body>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</html>
